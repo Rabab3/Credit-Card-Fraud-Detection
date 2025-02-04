@@ -4,14 +4,14 @@ Projet de Machine Learning pour détecter les fraudes sur les transactions par c
 🔍 Explication des données
 Le dataset utilisé provient de Kaggle : Credit Card Fraud Detection.
 
--Il contient 284 807 transactions, dont 492 frauduleuses (≈ 0.172%).
--Les variables V1, V2, ..., V28 sont issues d'une transformation PCA.
+- Il contient 284 807 transactions, dont 492 frauduleuses (≈ 0.172%).
+- Les variables V1, V2, ..., V28 sont issues d'une transformation PCA.
 
--Deux variables supplémentaires :
+- Deux variables supplémentaires :
   Time : Temps écoulé depuis la première transaction.
   Amount : Montant de la transaction.
 
--La variable cible Class :
+- La variable cible Class :
   0 = Transaction légitime
   1 = Transaction frauduleuse
 
