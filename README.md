@@ -1,4 +1,4 @@
-📌 Credit Card Fraud Detection
+📌 #Credit Card Fraud Detection
 Projet de Machine Learning pour détecter les fraudes sur les transactions par carte bancaire.
 
 🔍 Explication des données
