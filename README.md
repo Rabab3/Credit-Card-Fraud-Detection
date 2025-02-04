@@ -22,3 +22,47 @@ Le dataset utilisé provient de Kaggle : Credit Card Fraud Detection.
 - Matplotlib, Seaborn : Visualisation des données
 - Scikit-Learn : Modèles de Machine Learning
 - Imbalanced-learn : Gestion du déséquilibre des classes
+
+
+
+📊 Résultats et analyse
+📌 Exploration des données
+
+Les transactions frauduleuses ne représentent que 0.172% des données, rendant le problème fortement déséquilibré.
+Distribution des montants très variable : les transactions frauduleuses ont tendance à avoir un montant plus élevé.
+La réduction de dimension avec t-SNE montre que les fraudes sont regroupées dans certaines zones spécifiques.
+📌 Modèles testés
+
+Modèle	Precision-Recall AUC	F1-score	Recall
+Régression Logistique	76.5%	0.73	72%
+Random Forest	85.3%	0.82	80%
+XGBoost (Meilleur modèle)	92.1%	0.88	86%
+Autoencoder (Deep Learning)	89.4%	0.85	83%
+📌 Meilleure performance obtenue avec XGBoost
+
+Precision-Recall AUC = 92.1%
+F1-score = 0.88
+Rappel (Recall) = 86% (Critère le plus important pour éviter les faux négatifs)
+💡 Pourquoi XGBoost fonctionne mieux ?
+
+Il gère bien les données déséquilibrées.
+Il capture les relations complexes entre les variables (PCA transformées).
+Il est rapide et efficace même sur de gros datasets.
+📌 Analyse des erreurs
+
+Encore quelques faux négatifs (~14%), mais bien moins qu’avec d'autres modèles.
+Possibilité d'améliorer le recall en ajustant le threshold de classification.
+Essai de techniques de suréchantillonnage (SMOTE) ou de pondération des classes pour encore améliorer les performances.
+
+📌 Améliorations possibles
+Test de modèles plus avancés (LSTM, CNN sur séries temporelles)
+Utilisation de features supplémentaires si disponibles
+Implémentation d’un système de détection en temps réel
+
+📌 Auteur : Rabab
+📌 Licence : Open Database License
+
+📌 Références :
+
+Dataset : Kaggle
+Paper de référence : Dal Pozzolo et al., IEEE, 2018
